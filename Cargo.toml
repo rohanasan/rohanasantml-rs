@@ -1,0 +1,15 @@
+[package]
+name = "rohanasantml"
+version = "0.0.0"
+edition = "2021"
+authors = ["Rohan Vashisht"]
+readme = "README.md"
+description = "An easy way to write your messy html code in a better way."
+license-file = "LICENSE"
+license = "MIT"
+keywords = ["HTML", "Parser", "Parse", "Compiler", "Interpreter"]
+publish = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
