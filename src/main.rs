@@ -1,3 +1,5 @@
+// Project registered under GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Please check the LICENSE file for further details.
+
 use std::env;
 use std::fs::File;
 use std::io::{BufRead, BufReader, Write};
@@ -47,7 +49,10 @@ fn main() {
                 );
                 process::exit(1);
             }
-            resulting_html += &(line.replace("{", "").replace("}", "") + "\n");
+            if line.len() >= 2 {
+                resulting_html += &(line[1..line.len()-1]); // This is to remove the "{" and the "}" only from the start and the end.
+                resulting_html+="\n";
+            }
         } else if tokens.len() > 1 && tokens[1] == "end" {
             resulting_html += &format!("</{}>\n", tokens[0]);
             ended += 1;
